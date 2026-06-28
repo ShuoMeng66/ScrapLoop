@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绿环纪念站 | 公益回收冒险</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-frame" aria-label="绿环纪念站游戏窗口">
+        <canvas id="game" width="1280" height="720"></canvas>
+
+        <div id="titleScreen" class="title-screen">
+          <div class="title-copy">
+            <p class="eyebrow">公益回收 · 3D 废物打印</p>
+            <h1>绿环纪念站</h1>
+            <p>进入传送门选择“小怪清理”或“Boss 纪念品核心”。收集废物碎片升级装备，挑战蓝猫回收守卫，兑换 3D 打印实物纪念品。</p>
+            <div class="title-actions">
+              <button id="startBtn" class="game-button primary">开始游戏 Enter</button>
+              <button id="continueBtn" class="game-button">继续存档</button>
+              <button id="resetBtn" class="game-button quiet">重置</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="hud" class="hud">
+          <div class="stat-row">
+            <div class="vital-chip hp-chip">
+              <img src="./assets/sprites/item_heart.png" alt="" />
+              <div class="vital-copy">
+                <span id="hpText">HP 100/100</span>
+                <div class="vital-bar"><i id="hpFill"></i></div>
+              </div>
+            </div>
+            <div class="vital-chip shield-chip">
+              <img src="./assets/sprites/item_shield.png" alt="" />
+              <div class="vital-copy">
+                <span id="shieldText">护盾 0/90</span>
+                <div class="vital-bar"><i id="shieldFill"></i></div>
+              </div>
+            </div>
+            <span id="pointText" class="resource-chip">公益点 0</span>
+            <span id="printText" class="resource-chip">打印碎片 0</span>
+          </div>
+          <div class="scrap-row" id="scrapRow"></div>
+        </div>
+
+        <div class="mobile-pad" aria-label="触控按钮">
+          <div class="pad-grid">
+            <button data-pad="up">▲</button>
+            <button data-pad="left">◀</button>
+            <button data-pad="down">▼</button>
+            <button data-pad="right">▶</button>
+          </div>
+          <div class="pad-actions">
+            <button data-action="attack">攻击</button>
+            <button data-action="interact">互动</button>
+          </div>
+        </div>
+
+        <section id="modal" class="modal hidden" aria-live="polite"></section>
+        <div id="toast" class="toast hidden"></div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
