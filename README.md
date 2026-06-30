@@ -51,19 +51,6 @@ http://127.0.0.1:4177/
 - 解密模式看底部提示，必须按当前目标材料的顺序投放。
 - Boss 三阶段弹幕更密集，注意绕圈走位，利用护盾和修复站提高容错。
 
-## 公网发布
+## GithubPage部署
 
-项目是纯静态网页，所有资源都使用相对路径，可以部署到任意静态托管服务。
-
-Netlify Drop：
-
-1. 打开 https://app.netlify.com/drop
-2. 上传整个 `recycle-quest` 文件夹内容，或上传准备好的 `recycle-quest-netlify.zip` 解压后的文件夹。
-3. Netlify 生成公网 URL 后，任何电脑都可以直接打开游玩。
-
-GitHub Pages：
-
-1. 在 GitHub 新建一个公开仓库。
-2. 上传 `index.html`、`main.js`、`style.css`、`README.md` 和整个 `assets/` 文件夹。
-3. 在仓库 `Settings -> Pages` 中选择 `main` 分支和根目录发布。
-4. 等待 GitHub Pages 生成公网 URL。
+https://shuomeng66.github.io/ScrapLoop/
